@@ -5,7 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        System.out.print("Enter the Customer Name: ");
+        String cusName=sc.nextLine();
+        //sc.nextLine();
+        System.out.print("Enter user Mobile Number: ");
+        String mobileNum=sc.nextLine();
+        //sc.nextLine();
         System.out.print("Enter Pizza Type (V/NV): ");
         String pizzaType = sc.nextLine();
 
@@ -31,7 +36,7 @@ public class Main {
         if (takeaway.equalsIgnoreCase("yes")) {
             pizza.addTakeawayCharge();
         }
-
+        pizza.userDetails(cusName, mobileNum);
         pizza.printBill();
 
         sc.close();

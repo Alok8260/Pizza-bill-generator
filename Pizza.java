@@ -4,6 +4,9 @@ public class Pizza {
     private int pizzaPrice;
     private String pizzaType;
 
+    private String customerName;
+    private String mobileNumber;
+
     private int extraCheesePrice = 100;
     private int extraToppingPrice = 200;
     private int bagPack = 20;
@@ -21,6 +24,10 @@ public class Pizza {
         } else {
             this.pizzaPrice = 300;
         }
+    }
+    public void userDetails(String customerName, String mobileNumber){
+        this.customerName=customerName;
+        this.mobileNumber=mobileNumber;
     }
 
     public void addExtraCheese() {
@@ -44,6 +51,8 @@ public class Pizza {
     public void printBill() {
 
         System.out.println("----- PIZZA BILL -----");
+        System.out.println("Customer Name: "+ customerName);
+        System.out.println("Customer Mobile Number: "+ mobileNumber);
 
         System.out.println("Pizza Type : " + pizzaType);
 
